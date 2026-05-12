@@ -56,3 +56,18 @@ console.log("Total: "+total+" | Feitas: "+feitas);
 }
 // Teste final
 resumo();
+
+// Membro 3 — atualiza nomeBanco e adiciona encerrarConta()
+// ALTERE a linha do nomeBanco para:
+let nomeBanco = "BANCO DIGITAL PLUS";
+function encerrarConta(indice) {
+if (indice < 1 || indice > contas.length) {
+console.log("Conta não encontrada."); return;
+}
+contas[indice - 1].ativa = false;
+console.log("Conta de " + contas[indice-1].titular + " encerrada.");
+}
+// Teste
+criarConta("Carla Mendes", 750);
+encerrarConta(2);
+listarContas();
